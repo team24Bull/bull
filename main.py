@@ -12,6 +12,12 @@ def create_num():
 	nums = random.sample(range(10), k=digit)
 	return digit, nums
 
+def balls(user:list, answer:list):
+    ball_count = 0
+    for i in user:
+        if (i in answer) and (user.index(i) != answer.index(i)):
+            ball_count += 1
+    return  ball_count
 
 # 숫자 맞추기
 def get_strike_num(comp, user, n):
@@ -28,6 +34,10 @@ def get_strike_num(comp, user, n):
             strike += 1
 
     return strike
+
+
+
+
 
 def bull_input(digits):	
 	print("정답으로 생각하는 값을 입력하세요.")
@@ -62,3 +72,4 @@ def printOutFunc(user_num, nums):
 if __name__ == '__main__':
 	print(create_num())
 
+>>>>>>> main

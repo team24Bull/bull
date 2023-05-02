@@ -1,6 +1,3 @@
-comp = [1, 2, 3]
-user = [1, 2, 5]
-
 def function3(comp, user, n):
     # strike
     strike = 0
@@ -11,8 +8,3 @@ def function3(comp, user, n):
             strike += 1
 
     return strike
-
-def main():
-    print(function3(comp, user, len(comp)))
-
-main()

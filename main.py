@@ -12,6 +12,12 @@ def create_num():
 	nums = random.sample(range(10), k=digit)
 	return digit, nums
 
+def balls(user:list, answer:list):
+    ball_count = 0
+    for i in user:
+        if i in answer and user.index(i) != answer.index(i):
+            ball_count += 1
+    return  'balls: ' + str(ball_count)
 
 if __name__ == '__main__':
 	print(create_num())

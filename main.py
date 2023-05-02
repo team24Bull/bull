@@ -29,7 +29,6 @@ def get_strike_num(comp, user, n):
 
     return strike
 
-
 def bull_input(digits):	
 	print("정답으로 생각하는 값을 입력하세요.")
 	input_value = input()
@@ -51,6 +50,13 @@ def bull_input(digits):
 		print(e)
 		print("유효한 입력이 아닙니다")
 
+##  out 카운트 하기
+def printOutFunc(user_num, nums):
+    out_count = 0
+    for i in user_num: ## user_nums의 숫자가 nums 안에 없으면 out을 세시오.
+        if i not in nums :
+            out_count += 1
+    return out_count
  
 
 if __name__ == '__main__':

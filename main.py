@@ -36,6 +36,7 @@ def printOutFunc(user_num, nums):
     for i in user_num: ## user_nums의 숫자가 nums 안에 없으면 out을 세시오.
         if i not in nums :
             out_count += 1
+    return out_count
 
 if __name__ == '__main__':
 	print(create_nu())

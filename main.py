@@ -12,6 +12,12 @@ def create_num():
 	nums = random.sample(range(10), k=digit)
 	return digit, nums
 
+def balls(user:list, answer:list):
+    ball_count = 0
+    for i in user:
+        if (i in answer) and (user.index(i) != answer.index(i)):
+            ball_count += 1
+    return  ball_count
 
 # 숫자 맞추기
 def get_strike_num(comp, user, n):
@@ -30,14 +36,40 @@ def get_strike_num(comp, user, n):
     return strike
 
 
-def balls(user:list, answer:list):
-    ball_count = 0
-    for i in user:
-        if (i in answer) and (user.index(i) != answer.index(i)):
-            ball_count += 1
 
-    return  ball_count
 
+
+def bull_input(digits):	
+	print("정답으로 생각하는 값을 입력하세요.")
+	input_value = input()
+	# print(len(set(input_value)))
+	# print(type(input_value))
+
+	try:
+		#정수검사
+		if(input_value.isnumeric() == False):
+			print("입력값이 정수가 아닙니다.")
+		elif (len(set(input_value)) != len(input_value)):
+			print("입력값에 중복이 있습니다.")
+		#자릿수검사
+		elif (len(input_value) != digits):
+			print("입력값의 자릿수가 다릅니다.")
+		else:
+			return int(input_value)			
+	except Exception as e:
+		print(e)
+		print("유효한 입력이 아닙니다")
+
+##  out 카운트 하기
+def printOutFunc(user_num, nums):
+    out_count = 0
+    for i in user_num: ## user_nums의 숫자가 nums 안에 없으면 out을 세시오.
+        if i not in nums :
+            out_count += 1
+    return out_count
+ 
 
 if __name__ == '__main__':
-	print(cireate_num())
+	print(create_num())
+
+>>>>>>> main

@@ -13,5 +13,21 @@ def create_num():
 	return digit, nums
 
 
+# 숫자 맞추기
+def get_strike_num(comp, user, n):
+    '''
+	comp: 랜덤 숫자 리스트
+	user: 유저 인풋 숫자 리스트
+	n: 난이도
+	'''
+    strike = 0
+    for i in range (n):
+        # 값과 위치가 같다면
+        if comp[i] == user[i]:
+            # strike 값을 증가 시킨다
+            strike += 1
+
+    return strike
+
 if __name__ == '__main__':
 	print(create_num())

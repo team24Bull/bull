@@ -14,8 +14,12 @@ def create_num():
 
 
 # 숫자 맞추기
-def function3(comp, user, n):
-    # strike
+def get_strike_num(comp, user, n):
+    '''
+	comp: 랜덤 숫자 리스트
+	user: 유저 인풋 숫자 리스트
+	n: 난이도
+	'''
     strike = 0
     for i in range (n):
         # 값과 위치가 같다면

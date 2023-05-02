@@ -29,5 +29,15 @@ def get_strike_num(comp, user, n):
 
     return strike
 
+
+def balls(user:list, answer:list):
+    ball_count = 0
+    for i in user:
+        if i in answer and user.index(i) != answer.index(i):
+            ball_count += 1
+
+    return  ball_count
+
+
 if __name__ == '__main__':
-	print(create_num())
+	print(cireate_num())

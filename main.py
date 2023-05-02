@@ -33,7 +33,7 @@ def get_strike_num(comp, user, n):
 def balls(user:list, answer:list):
     ball_count = 0
     for i in user:
-        if i in answer and user.index(i) != answer.index(i):
+        if (i in answer) and (user.index(i) != answer.index(i)):
             ball_count += 1
 
     return  ball_count

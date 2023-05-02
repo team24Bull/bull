@@ -32,9 +32,10 @@ def get_strike_num(comp, user, n):
 
 # out 프린트하기
 def printOutFunc(user_num, nums):
-    for i in user_num: ## user_nums의 숫자가 nums에 없다면 'Out!'을 프린트하세요
+    out_count = 0  
+    for i in user_num: ## user_nums의 숫자가 nums 안에 없으면 out을 세시오.
         if i not in nums :
-            print('Out!')
+            out_count += 1
 
 if __name__ == '__main__':
-	print(create_num())
+	print(create_nu())
